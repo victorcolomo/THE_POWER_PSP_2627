@@ -1,3 +1,4 @@
+import java.io.IOException;
 
 /**
  * Crea un programa EjecutorPotencia.java que: Lance dos procesos hijos
@@ -16,7 +17,16 @@ public class EjecutorPotencia {
 		// Redireccionamos la salida estandar y de error de los procesos
 		
 		// Lanzamos los procesos
+		try {
+			pb1.start();
+			pb2.start();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
-		// Esperamos que terminen los hijos y mostramos sus código de salia
+		
+		// Esperamos que terminen los hijos y mostramos sus código de salida
+		
 	}
 }
